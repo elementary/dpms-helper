@@ -1,0 +1,14 @@
+Source: io.elementary.dpms-helper
+Section: x11
+Priority: optional
+Maintainer: Cody Garver <cody@elementary.io>
+Build-Depends: meson, debhelper (>= 9), libglib2.0-dev
+Standards-Version: 3.9.7
+
+Package: io.elementary.dpms-helper
+Architecture: all
+Depends: x11-xserver-utils, ${misc:Depends}
+Description: script and settings for X DPMS
+ Basic script and GSettings for managing
+ X Display Power Management Signaling when
+ GNOME Settings Daemon's Power plugin should not.
