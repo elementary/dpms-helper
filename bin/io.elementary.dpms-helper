@@ -16,7 +16,7 @@ Using settings found in io.elementary.dpms (0 seconds = Never).
     exec xset dpms "$standby_time" "$suspend_time" "$off_time"
 }
 
-gsd_status=$(gsettings get org.gnome.settings-daemon.plugins.power manage-dpms-defaults)
+gsd_status=$(gsettings get org.gnome.settings-daemon.plugins.power manage-dpms-defaults || echo true)
 
 if [ "$gsd_status" = "false" ] ; then
     set_dpms
