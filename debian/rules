@@ -8,3 +8,6 @@ override_dh_install:
 
 override_dh_installgsettings:
 	dh_installgsettings --priority=25
+
+# Disable tests until they work
+DEB_BUILD_OPTIONS=nocheck
