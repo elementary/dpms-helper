@@ -2,7 +2,7 @@ Source: io.elementary.dpms-helper
 Section: x11
 Priority: optional
 Maintainer: Cody Garver <cody@elementary.io>
-Build-Depends: meson, debhelper (>= 9), desktop-file-utils, libglib2.0-dev
+Build-Depends: debhelper (>= 9), desktop-file-utils, libglib2.0-dev, meson
 Standards-Version: 3.9.7
 
 Package: io.elementary.dpms-helper
