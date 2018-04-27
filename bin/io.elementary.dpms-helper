@@ -1,14 +1,14 @@
 #! /bin/sh -e
 
 set_dpms() {
-    standby_time=$(gsettings get org.pantheon.dpms standby-time | cut -d" " -f2)
+    standby_time=$(gsettings get io.elementary.dpms standby-time | cut -d" " -f2)
 
-    suspend_time=$(gsettings get org.pantheon.dpms suspend-time | cut -d" " -f2)
+    suspend_time=$(gsettings get io.elementary.dpms suspend-time | cut -d" " -f2)
 
-    off_time=$(gsettings get org.pantheon.dpms off-time | cut -d" " -f2)
+    off_time=$(gsettings get io.elementary.dpms off-time | cut -d" " -f2)
 
     echo "org.gnome.settings-daemon.plugins.power manage-dpms-defaults is false.
-Using settings found in org.pantheon.dpms (0 seconds = Never).
+Using settings found in io.elementary.dpms (0 seconds = Never).
     Standby: $standby_time seconds
     Suspend: $suspend_time seconds
     Off: $off_time seconds"

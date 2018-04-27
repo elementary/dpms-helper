@@ -1,5 +1,5 @@
 install_data(
-    'org.pantheon.dpms.gschema.xml',
+    'io.elementary.dpms.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )
 

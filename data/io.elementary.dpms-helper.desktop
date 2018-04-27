@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=elementary-dpms-helper
+Name=io.elementary.dpms-helper
 Comment=DPMS settings helper
-Exec=elementary-dpms-helper
+Exec=io.elementary.dpms-helper
 Terminal=false
 Type=Application
 Categories=System;

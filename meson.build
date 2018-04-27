@@ -1,4 +1,4 @@
-project('elementary-dpms-helper')
+project('io.elementary.dpms-helper')
 
 subdir('bin')
 subdir('data')

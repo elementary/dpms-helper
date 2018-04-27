@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema path="/org/pantheon/dpms/"
-  id="org.pantheon.dpms"
-  gettext-domain="dpms">
+  <schema path="/io/elementary/dpms/"
+  id="io.elementary.dpms">
     <key name="standby-time" type="i">
       <default>900</default>
       <range min="0" max="7200" />
