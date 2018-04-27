@@ -11,5 +11,5 @@ install_data(
 test(
     'Validate desktop file',
     find_program('desktop-file-validate'),
-    args: meson.project_name() + '.desktop'
+    args: join_paths(meson.current_build_dir (), meson.project_name() + '.desktop')
 )
