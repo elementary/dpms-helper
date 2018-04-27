@@ -12,3 +12,10 @@ Description: script and settings for X DPMS
  Basic script and GSettings for managing
  X Display Power Management Signaling when
  GNOME Settings Daemon's Power plugin should not.
+
+Package: elementary-dpms-helper
+Architecture: all
+Depends: io.elementary.dpms-helper, ${misc:Depends}
+Priority: optional
+Description: Dummy transitional package
+ This package is transitional to io.elementary.dpms-helper, it is safe to remove.
