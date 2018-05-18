@@ -17,5 +17,6 @@ Package: elementary-dpms-helper
 Architecture: all
 Depends: io.elementary.dpms-helper, ${misc:Depends}
 Priority: optional
+Section: oldlibs
 Description: Dummy transitional package
  This package is transitional to io.elementary.dpms-helper, it is safe to remove.
