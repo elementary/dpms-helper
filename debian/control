@@ -2,8 +2,8 @@ Source: io.elementary.dpms-helper
 Section: x11
 Priority: optional
 Maintainer: Cody Garver <cody@elementary.io>
-Build-Depends: debhelper (>= 9), desktop-file-utils, libglib2.0-dev, meson
-Standards-Version: 3.9.7
+Build-Depends: debhelper (>= 10.5.1), desktop-file-utils, libglib2.0-dev, meson
+Standards-Version: 4.1.1
 
 Package: io.elementary.dpms-helper
 Architecture: all
