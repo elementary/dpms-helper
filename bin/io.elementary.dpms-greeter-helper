@@ -1,0 +1,29 @@
+#!/bin/bash
+source="/etc/systemd/power-greeter.conf"
+get_dpms_greeter () {
+sleep 1
+truncate -s 0 "$source"
+ac_power=$(gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout)
+battery=$(gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout)
+echo $ac_power >> $source
+echo $battery >> $source
+
+
+    echo "Get settings org.gnome.settings-daemon.plugins.power for greeter 
+    ACPower: $ac_power seconds
+    Battery: $battery seconds "
+}
+
+set_dpms_greeter () {
+ac_power=$(sed -n '1p;3p' < $source)
+battery=$(sed -n '2p;3p' < $source)
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout "$ac_power"
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout "$battery"
+
+}
+
+if [ "$USER" = "lightdm" ] ; then
+    set_dpms_greeter
+else
+    get_dpms_greeter
+fi
