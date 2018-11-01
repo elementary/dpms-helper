@@ -13,11 +13,6 @@ install_data(
     install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart')
 )
 
-install_data(
-    'power-greeter.conf',
-    install_dir: join_paths(get_option('sysconfdir'), 'systemd')
-)
-
 test(
     'Validate desktop file',
     find_program('desktop-file-validate'),

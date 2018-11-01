@@ -1,8 +1,8 @@
 #!/bin/bash
-source="/etc/systemd/power-greeter.conf"
+source=~/.configdpms
 get_dpms_greeter () {
 sleep 1
-truncate -s 0 "$source"
+truncate -s 0 ~/.configdpms
 ac_power=$(gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout)
 battery=$(gsettings get org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout)
 echo $ac_power >> $source
